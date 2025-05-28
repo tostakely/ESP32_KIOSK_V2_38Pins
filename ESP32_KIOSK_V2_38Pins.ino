@@ -4,6 +4,8 @@ version history
 started code from existing sketches in 09-05-24 
 RFID OK Mamaky sy Manoratra
 09-07-2024: add SIM800L communication through Serial2
+21/03/2025
+Nesorina ilay RTC
 */
 
 #include <SPI.h>
@@ -88,7 +90,7 @@ const int resolution = 4095; // Résolution ADC de l'ESP32 (12 bits)
 
 unsigned long startDis,endDis,dureeDis;
 
-const float volumeMax = 21.5;  
+const float volumeMax = 5;  // 21.5
 
 
 volatile byte pulseCount;
@@ -721,7 +723,6 @@ String Tension_Batterie(int pin , float R1 , float R2){
   return Tension;
 }
 void setup() {
-  
   Serial.begin(9600);
   SIM800L.begin(9600,SERIAL_8N1,RXD2,TXD2);
   SPI.begin(); // Init SPI bus
