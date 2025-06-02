@@ -56,7 +56,11 @@ LiquidCrystal_I2C lcd(0x27,16,2);
 #define USE_SSL true
 #define DELAY_MS 0
 #define SIM800L Serial2
+<<<<<<< HEAD:ESP32_KIOSK_V2_38Pins_2.2.ino
 String deviceID="unicef02";// code to recognize which device is sending data
+=======
+String deviceID="0381821103";// code to recognize which device is sending data
+>>>>>>> fe9ba3a543ab10a2e336ef6b3b1e2bd0207d3635:ESP32_KIOSK_V2_38Pins.ino
 String date="";
 boolean gprs_disconnect();
 boolean is_gprs_connected();
@@ -104,7 +108,7 @@ const int resolution = 4095; // Résolution ADC de l'ESP32 (12 bits)
 
 unsigned long startDis,endDis,dureeDis;
 
-const float volumeMax = 21.5;  
+const float volumeMax = 5;  // 21.5
 
 
 volatile byte pulseCount;
@@ -693,10 +697,13 @@ String Tension_Batterie(int pin , float R1 , float R2){
 
 //---------------------------------------------------------------------------------------------SETUP------------------------------------------------------------------------------------------------------------//
 void setup() {
+<<<<<<< HEAD:ESP32_KIOSK_V2_38Pins_2.2.ino
   // Réserve de la mémoire pour la chaîne request_url afin d'éviter des réallocations inutiles
   // lors des ajouts futurs. Ici, 512 octets sont préalloués pour optimiser les performances.
   request_url.reserve(512);
   
+=======
+>>>>>>> fe9ba3a543ab10a2e336ef6b3b1e2bd0207d3635:ESP32_KIOSK_V2_38Pins.ino
   Serial.begin(9600);
   SIM800L.begin(9600,SERIAL_8N1,RXD2,TXD2);
   SPI.begin(); //Init SPI bus
