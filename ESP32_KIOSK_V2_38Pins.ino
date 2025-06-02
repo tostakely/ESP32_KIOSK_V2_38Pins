@@ -39,7 +39,7 @@ LiquidCrystal_I2C lcd(0x27,16,2);
 #define USE_SSL true
 #define DELAY_MS 0
 #define SIM800L Serial2
-String deviceID="0384831334";// code to recognize which device is sending data
+String deviceID="0381821103";// code to recognize which device is sending data
 String date="";
 boolean gprs_disconnect();
 boolean is_gprs_connected();
